@@ -1,0 +1,82 @@
+
+	\documentclass{article}
+\begin{document}
+
+\begin{large}\textbf\center{TRANSLATION TO GENERAL PURPOSE GRAPHICS PROCESSING UNIT.}\end{large}
+
+\section{Introduction.}
+{There has been increasing interest in using GPGPU based systems in the school and NVidia/CUDA
+seems to have become the default environment for this and this is where most of our experience lies.
+A general-purpose GPU (GPGPU) is a graphics processing unit (GPU) that performs non-specialized
+calculations that would typically be conducted by the CPU (central processing unit). Ordinarily, the
+GPU is dedicated to graphics rendering. GPGPU which is General-purpose computing on GPUs only
+became practical and popular after about 2001, with the advent of both programmable shade and
+floating point support on graphics processors. Notably, problems involving matrices and/or vectors
+especially two, three, or four dimensional vectors were easy to translate to a GPU, which acts with
+native speed and support on those types. The scientific computing community’s experiments with
+the new hardware began with a matrix multiplication routine (2001). One of the first common
+scientific programs to run faster on GPUs than CPUs was an implementation of LU factorization
+(2005).
+}
+
+\section{Background To The Problem.}
+{As both CPU and GPU become employed in a wide range of applications, it has been acknowledged
+that both of these processing units (PUs) have their unique features and strengths and hence,
+CPU-GPU collaboration is inevitable to achieve high-performance computing. This has motivated
+significant amount of research on heterogeneous computing techniques, along with the design of
+CPU-GPU fused chips. These early efforts to use GPUs as general-purpose processors required
+reformulating computational problems in terms of graphics primitives, as supported by the two major
+APIs for graphics processors, OpenGL and DirectX. This cumbersome translation was obviated by
+the advent of general-purpose programming languages and APIs such as Sh/Rapid Mind, Brook and
+Accelerator. This means that modern GPGPU pipelines can leverage the speed of a GPU without
+requiring full and explicit conversion of the data to a graphical form.
+}
+
+\section{Problem Statement.}
+{There has been a problem of parallel processing multiple evaluation of a sequential task on large
+data sets for example when you have code involving lots of large (especially nested) loops, it became
+a must to calls for parallelization of that peace of code anyway. If it is a code that executes within
+the loops then it becomes a must for it to be reduced to a fairly simple algorithm.Putting that a
+side, there is also a problem were you have a large dataset that fits, or needs to be made to fit into
+the memory structures of the hardware you have. If your code involves manipulating large matrices,
+all these above problems makes a call and need of GPGPU for them to be solved.
+}
+
+\section{Objectives.}
+{To develop a high-performance computing system that can do automatic translation to general
+purpose computing on an FFT mapping on GPU for radar processing application.
+
+To collect and analyze the requirements about the relevance and feasibility of the Automatic translation
+to GPGPU on an FFT mapping on GPU for radar processing application.
+
+To implement the FFT mapping on GPU for radar processing application.
+
+To test and validate the application.
+}
+
+\section{Research Scope.}
+{This research is based on Efficient FFT mapping on GPU for radar processing application. General purpose
+multiprocessors (as, in our case, Intel Ivy Bridge and Intel Haswell) increasingly add GPU
+computing power to the former multicore architectures. When used for embedded applications (for
+us, Synthetic aperture radar) with intensive signal processing requirements, they must constantly
+compute convolution algori thms, such as the famous Fast Fourier Transform. Due to its ”fractal”
+nature (the typical butterfly shape, with larger FFTs defined as combination of smaller ones with
+auxiliary data array transpose functions), one can hope to compute analytically the size of the largest
+FFT that can be performed locally on an elementary GPU compute block. Then, the full application
+must be organized around this given building block size. Now, due to phenomena involved in the
+data transfers between various memory levels across CPUs and GPUs, the optimality of such a
+scheme is only loosely predictable (as communications tend to overcome in time the complexity of
+computations). Therefore  mix of (theoretical) analytic approach and (practical) runtime validation
+is here needed. This occurs at both stage, first at the level of deciding on a given elementary FFT
+block size, then at the full application level.
+}
+
+\section{References.}
+{Proceedings of the international Symposium on Wearable Computing 2002(ISWC2002),Washington, USA, 7-10 October 2002, pp.83-89.
+
+Mark Harris. Mapping computation concepts to GPUs. In ACM SIGGRAPH 2005 Courses(Los Angeles,Califonia,31 July-4 August 2005). J.Fujji, Ed.SIGGRAPH’’05.ACM Press, New York, NY, 50.
+
+Dominik Goddeke, Robert Strzodka, and Stefan Turek. Accelerating Double Precision(FEM) Simulations with (GPUS). Proceedings of ASIM 2005-18th Symposium on Simulation Technique, 2005.
+}
+
+\end{document}
